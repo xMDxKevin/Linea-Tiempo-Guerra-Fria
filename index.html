@@ -3,219 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Línea del Tiempo Interactiva</title>
+    <title>Guerra Fría - Línea del Tiempo Interactiva</title>
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>La Guerra Fría</h1>
-        <h2 class="subtitle">1947 - 1991</h2>
-        
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content" data-image="🕊️">
-                    <div class="timeline-date">1945</div>
-                    <h3>Fin de la Segunda Guerra Mundial 🕊️</h3>
-                    <p>Reunión entre EE. UU., Reino Unido y la URSS para decidir el futuro de Europa tras la derrota de Alemania.</p>
-                    <div class="event-image">🕊️</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Conferencia_de_Yalta" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=segunda+guerra+mundial+1945" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- Símbolos flotantes animados -->
+    <div class="floating-symbols">
+        <div class="symbol">☭</div>
+        <div class="symbol">★</div>
+        <div class="symbol">☭</div>
+        <div class="symbol">★</div>
+        <div class="symbol">☭</div>
+        <div class="symbol">★</div>
+        <div class="symbol">☭</div>
+        <div class="symbol">★</div>
+        <div class="symbol">☭</div>
+        <div class="symbol">★</div>
+        <div class="symbol">🚀</div>
+        <div class="symbol">🛰️</div>
+        <div class="symbol">☢️</div>
+        <div class="symbol">🧱</div>
+        <div class="symbol">⚔️</div>
+    </div>
 
-            <div class="timeline-item right">
-                <div class="timeline-content" data-image="⚔️">
-                    <div class="timeline-date">1947</div>
-                    <h3>Inicio de la Guerra Fría: Doctrina Truman ⚔️</h3>
-                    <p>EE. UU. anuncia su política de contención del comunismo; se marcan los bandos capitalista y socialista.</p>
-                    <div class="event-image">⚔️</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Doctrina_Truman" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=doctrina+truman+guerra+fria" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
-                </div>
+    <!-- Navegación superior -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <h1 class="nav-title">⚔️ La Guerra Fría</h1>
+            <div class="nav-buttons">
+                <button onclick="showTimeline()" class="nav-btn active" id="timeline-btn">📅 Línea del Tiempo</button>
+                <button onclick="showGame()" class="nav-btn" id="game-btn">🎮 Juego de Trivia</button>
             </div>
+        </div>
+    </nav>
 
-            <div class="timeline-item left">
-                <div class="timeline-content" data-image="💵">
-                    <div class="timeline-date">1948</div>
-                    <h3>Plan Marshall 💵</h3>
-                    <p>Programa estadounidense de ayuda económica para reconstruir Europa y evitar la expansión comunista.</p>
-                    <div class="event-image">💵</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Plan_Marshall" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=plan+marshall" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
+    <!-- Sección de Línea del Tiempo -->
+    <section id="timeline-section" class="section active">
+        <div class="timeline-header">
+            <h2>1947 - 1991</h2>
+            <p>Explora los eventos más importantes de la Guerra Fría</p>
+        </div>
+
+        <!-- Timeline Horizontal Interactiva -->
+        <div class="timeline-container">
+            <div class="timeline-track">
+                <!-- Evento 1 -->
+                <div class="timeline-card" onclick="openModal(0)">
+                    <div class="card-year">1945</div>
+                    <div class="card-icon">🕊️</div>
+                    <div class="card-title">Fin de la Segunda Guerra Mundial</div>
+                    <div class="card-preview">Conferencia de Yalta...</div>
                 </div>
-            </div>
 
-            <div class="timeline-item right">
-                <div class="timeline-content" data-image="🛡️">
-                    <div class="timeline-date">1949</div>
-                    <h3>Formación de la OTAN (Organización del Tratado del Atlántico Norte) 🛡️</h3>
-                    <p>Alianza militar de defensa mutua entre EE. UU., Canadá y varios países europeos occidentales.</p>
-                    <div class="event-image">🛡️</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Organización_del_Tratado_del_Atlántico_Norte" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=creacion+OTAN+1949" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
+                <!-- Evento 2 -->
+                <div class="timeline-card" onclick="openModal(1)">
+                    <div class="card-year">1947</div>
+                    <div class="card-icon">⚔️</div>
+                    <div class="card-title">Doctrina Truman</div>
+                    <div class="card-preview">Inicio oficial de la Guerra Fría...</div>
                 </div>
-            </div>
 
-            <div class="timeline-item left">
-                <div class="timeline-content" data-image="🚩">
-                    <div class="timeline-date">1955</div>
-                    <h3>Pacto de Varsovia 🚩</h3>
-                    <p>Respuesta soviética a la OTAN; alianza militar entre la URSS y sus países satélites de Europa del Este.</p>
-                    <div class="event-image">🚩</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Pacto_de_Varsovia" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=pacto+de+varsovia" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
+                <!-- Evento 3 -->
+                <div class="timeline-card" onclick="openModal(2)">
+                    <div class="card-year">1948</div>
+                    <div class="card-icon">💵</div>
+                    <div class="card-title">Plan Marshall</div>
+                    <div class="card-preview">Ayuda económica para Europa...</div>
                 </div>
-            </div>
 
-            <div class="timeline-item right">
-                <div class="timeline-content expandable" onclick="toggleSubitems(this)" data-image="💣">
-                    <div class="timeline-date">1950–1989</div>
-                    <h3>Guerras y conflictos: Corea, Vietnam, Cuba, Afganistán 💣 ▼</h3>
-                    <p>Enfrentamientos indirectos entre EE. UU. y la URSS por el control ideológico global.</p>
-                    <div class="event-image">💣</div>
-                    <div class="subitems">
-                        <div class="subitem">
-                            <strong>1950–1953: Guerra de Corea</strong>
-                            Corea del Norte (comunista) invade al Sur; intervención de EE. UU. y la ONU.
-                            <div class="subitem-links">
-                                <a href="https://es.wikipedia.org/wiki/Guerra_de_Corea" target="_blank">📖 Info</a>
-                                <a href="https://www.youtube.com/results?search_query=guerra+de+corea" target="_blank">🎥 Videos</a>
-                            </div>
-                        </div>
-                        <div class="subitem">
-                            <strong>1955–1975: Guerra de Vietnam 🌿</strong>
-                            Conflicto entre Vietnam del Norte (apoyado por la URSS) y Vietnam del Sur (apoyado por EE. UU.).
-                            <div class="subitem-links">
-                                <a href="https://es.wikipedia.org/wiki/Guerra_de_Vietnam" target="_blank">📖 Info</a>
-                                <a href="https://www.youtube.com/results?search_query=guerra+de+vietnam" target="_blank">🎥 Videos</a>
-                            </div>
-                        </div>
-                        <div class="subitem">
-                            <strong>1962: Crisis de los Misiles en Cuba ☢️</strong>
-                            URSS instala misiles en Cuba apuntando a EE. UU.; el mundo al borde de una guerra nuclear.
-                            <div class="subitem-links">
-                                <a href="https://es.wikipedia.org/wiki/Crisis_de_los_misiles_en_Cuba" target="_blank">📖 Info</a>
-                                <a href="https://www.youtube.com/results?search_query=crisis+misiles+cuba" target="_blank">🎥 Videos</a>
-                            </div>
-                        </div>
-                        <div class="subitem">
-                            <strong>1979–1989: Guerra de Afganistán 🪖</strong>
-                            La URSS invade Afganistán para apoyar un gobierno comunista; EE. UU. respalda a los rebeldes afganos.
-                            <div class="subitem-links">
-                                <a href="https://es.wikipedia.org/wiki/Guerra_de_Afganistán_(1978-1992)" target="_blank">📖 Info</a>
-                                <a href="https://www.youtube.com/results?search_query=invasion+sovietica+afganistan" target="_blank">🎥 Videos</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Guerra_Fría" target="_blank" class="event-link">
-                            📖 Leer más sobre la Guerra Fría
-                        </a>
-                    </div>
+                <!-- Evento 4 -->
+                <div class="timeline-card" onclick="openModal(3)">
+                    <div class="card-year">1949</div>
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Formación de la OTAN</div>
+                    <div class="card-preview">Alianza militar occidental...</div>
                 </div>
-            </div>
 
-            <div class="timeline-item left">
-                <div class="timeline-content expandable" onclick="toggleSubitems(this)" data-image="🚀">
-                    <div class="timeline-date">1957–1969</div>
-                    <h3>Carrera Espacial 🚀 ▼</h3>
-                    <p>Competencia tecnológica y científica entre EE. UU. y la URSS por la supremacía espacial.</p>
-                    <div class="event-image">🚀</div>
-                    <div class="subitems">
-                        <div class="subitem">
-                            <strong>1957: Llegada del hombre al espacio 🛰️</strong>
-                            URSS lanza el Sputnik y luego envía al primer hombre al espacio: Yuri Gagarin.
-                            <div class="subitem-links">
-                                <a href="https://es.wikipedia.org/wiki/Yuri_Gagarin" target="_blank">📖 Info</a>
-                                <a href="https://www.youtube.com/results?search_query=yuri+gagarin+primer+hombre+espacio" target="_blank">🎥 Videos</a>
-                            </div>
-                        </div>
-                        <div class="subitem">
-                            <strong>1969: Llegada del hombre a la Luna 🌕</strong>
-                            EE. UU. logra llevar al primer hombre a la Luna con la misión Apolo 11.
-                            <div class="subitem-links">
-                                <a href="https://es.wikipedia.org/wiki/Apolo_11" target="_blank">📖 Info</a>
-                                <a href="https://www.youtube.com/results?search_query=apolo+11+llegada+luna" target="_blank">🎥 Videos</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Carrera_espacial" target="_blank" class="event-link">
-                            📖 Leer más sobre la Carrera Espacial
-                        </a>
-                    </div>
+                <!-- Evento 5 -->
+                <div class="timeline-card" onclick="openModal(4)">
+                    <div class="card-year">1955</div>
+                    <div class="card-icon">🚩</div>
+                    <div class="card-title">Pacto de Varsovia</div>
+                    <div class="card-preview">Respuesta soviética a la OTAN...</div>
                 </div>
-            </div>
 
-            <div class="timeline-item right">
-                <div class="timeline-content" data-image="🧱">
-                    <div class="timeline-date">1989</div>
-                    <h3>Caída del Muro de Berlín 🧱➡️</h3>
-                    <p>Símbolo del fin de la división de Europa y debilitamiento del comunismo.</p>
-                    <div class="event-image">🧱</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Caída_del_Muro_de_Berlín" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=caida+muro+berlin+1989" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
+                <!-- Evento 6 -->
+                <div class="timeline-card" onclick="openModal(5)">
+                    <div class="card-year">1950-1989</div>
+                    <div class="card-icon">💣</div>
+                    <div class="card-title">Conflictos Armados</div>
+                    <div class="card-preview">Corea, Vietnam, Cuba, Afganistán...</div>
                 </div>
-            </div>
 
-            <div class="timeline-item left">
-                <div class="timeline-content" data-image="🌍">
-                    <div class="timeline-date">1991</div>
-                    <h3>Fin de la Guerra Fría: Disolución de la URSS 🌍</h3>
-                    <p>Colapso del bloque socialista y nacimiento de nuevas repúblicas independientes.</p>
-                    <div class="event-image">🌍</div>
-                    <div class="links-container">
-                        <a href="https://es.wikipedia.org/wiki/Disolución_de_la_Unión_Soviética" target="_blank" class="event-link">
-                            📖 Leer más
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=disolucion+union+sovietica+1991" target="_blank" class="event-link video-link">
-                            🎥 Ver videos
-                        </a>
-                    </div>
+                <!-- Evento 7 -->
+                <div class="timeline-card" onclick="openModal(6)">
+                    <div class="card-year">1957-1969</div>
+                    <div class="card-icon">🚀</div>
+                    <div class="card-title">Carrera Espacial</div>
+                    <div class="card-preview">Competencia por el espacio...</div>
+                </div>
+
+                <!-- Evento 8 -->
+                <div class="timeline-card" onclick="openModal(7)">
+                    <div class="card-year">1989</div>
+                    <div class="card-icon">🧱</div>
+                    <div class="card-title">Caída del Muro de Berlín</div>
+                    <div class="card-preview">Símbolo del fin de la división...</div>
+                </div>
+
+                <!-- Evento 9 -->
+                <div class="timeline-card" onclick="openModal(8)">
+                    <div class="card-year">1991</div>
+                    <div class="card-icon">🌍</div>
+                    <div class="card-title">Disolución de la URSS</div>
+                    <div class="card-preview">Fin de la Guerra Fría...</div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Modal para detalles -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" id="modal-icon">🕊️</div>
+                <div class="modal-year" id="modal-year">1945</div>
+            </div>
+            <h2 id="modal-title">Título del Evento</h2>
+            
+            <!-- Contenedor para la imagen histórica -->
+            <div class="modal-image-container">
+                <img id="modal-image" src="" alt="Imagen histórica" class="modal-image">
+            </div>
+            
+            <div id="modal-description"></div>
+            <div id="modal-links" class="modal-links"></div>
+        </div>
     </div>
 
-    <!-- Sección de Créditos -->
+    <!-- Sección del Juego -->
+    <section id="game-section" class="section">
+        <div class="game-container">
+            <div class="game-header">
+                <h2>🎮 Trivia de la Guerra Fría</h2>
+                <p>Pon a prueba tus conocimientos sobre la Guerra Fría</p>
+            </div>
+
+            <div class="game-stats">
+                <div class="stat-box">
+                    <span class="stat-label">Pregunta</span>
+                    <span class="stat-value" id="current-question">1</span> / <span id="total-questions">10</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Puntuación</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Racha</span>
+                    <span class="stat-value" id="streak">0</span> 🔥
+                </div>
+            </div>
+
+            <div class="question-container" id="question-container">
+                <div class="question-text" id="question-text">
+                    ¿En qué año comenzó oficialmente la Guerra Fría?
+                </div>
+                <div class="answers-grid" id="answers-grid">
+                    <button class="answer-btn" onclick="checkAnswer(0)">1945</button>
+                    <button class="answer-btn" onclick="checkAnswer(1)">1947</button>
+                    <button class="answer-btn" onclick="checkAnswer(2)">1950</button>
+                    <button class="answer-btn" onclick="checkAnswer(3)">1939</button>
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <button class="next-btn" id="next-btn" onclick="nextQuestion()" style="display:none;">Siguiente Pregunta →</button>
+            </div>
+
+            <div class="game-results" id="game-results" style="display:none;">
+                <div class="results-icon" id="results-icon">🏆</div>
+                <h3 id="results-title">¡Juego Completado!</h3>
+                <div class="results-score">
+                    <div class="final-score">
+                        <span id="final-score">0</span> / <span id="final-total">10</span>
+                    </div>
+                    <div class="score-percentage" id="score-percentage">0%</div>
+                </div>
+                <div class="results-message" id="results-message"></div>
+                <button class="restart-btn" onclick="restartGame()">🔄 Jugar de Nuevo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer de Créditos -->
     <footer class="credits">
         <div class="credits-container">
             <h2>Créditos</h2>
@@ -237,32 +216,9 @@
                 </div>
             </div>
             <p class="credits-footer">Proyecto educativo sobre la Guerra Fría (1947-1991)</p>
-            <p class="credits-footer">2025</p>
         </div>
     </footer>
 
-
-    <script>
-        function toggleSubitems(element) {
-            const subitems = element.querySelector('.subitems');
-            const title = element.querySelector('h3');
-            
-            if (subitems.classList.contains('active')) {
-                subitems.classList.remove('active');
-                title.innerHTML = title.innerHTML.replace('▲', '▼');
-            } else {
-                // Cerrar otros subitems abiertos
-                document.querySelectorAll('.subitems.active').forEach(item => {
-                    item.classList.remove('active');
-                });
-                document.querySelectorAll('.expandable h3').forEach(h3 => {
-                    h3.innerHTML = h3.innerHTML.replace('▲', '▼');
-                });
-                
-                subitems.classList.add('active');
-                title.innerHTML = title.innerHTML.replace('▼', '▲');
-            }
-        }
-    </script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
